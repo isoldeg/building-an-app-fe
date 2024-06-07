@@ -1,0 +1,28 @@
+mat-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10%;
+  margin-right: 30%;
+  margin-left: 30%;
+}
+
+input {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid grey;
+  box-shadow: 2px 2px #888888;
+}
+
+button {
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px
+}
+

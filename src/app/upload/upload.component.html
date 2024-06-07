@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Upload a Video</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div id="fileUpload">
+      <input type="file" (change)="onFileSelected($event)" />
+      <button (click)="onUpload()">Upload File</button>
+    </div>
+  </mat-card-content>
+</mat-card>

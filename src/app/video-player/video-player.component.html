@@ -1,0 +1,33 @@
+<button class="upload-button" (click)="uploadVideo()">
+  <i class="fas fa-upload"></i> Upload
+</button>
+
+<div class="container">
+  <div class="left">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Video list:</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <ul>
+          <li *ngFor="let video of dictionaryOfVideos | keyvalue" (click)="clickVideoUrl(video.value)">{{ video.key }}</li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div *ngIf="uploadedVideoUrl" class="right">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Video Player</mat-card-title>
+        <mat-card-subtitle>{{ uploadedVideoUrl.split('/').pop() }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <video width="80%" height="80%" controls [src]="uploadedVideoUrl">
+          Your browser does not support the video tag.
+        </video>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
